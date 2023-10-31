@@ -13,6 +13,7 @@
 		304C03E92AD94B8F00B49267 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 304C03E72AD94B8F00B49267 /* Main.storyboard */; };
 		304C03EB2AD94B9200B49267 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304C03EA2AD94B9200B49267 /* Assets.xcassets */; };
 		304C03EE2AD94B9200B49267 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 304C03EC2AD94B9200B49267 /* LaunchScreen.storyboard */; };
+		308C1ED32AF0FA6E007C1319 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308C1ED22AF0FA6E007C1319 /* HomeScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		304C03EA2AD94B9200B49267 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		304C03ED2AD94B9200B49267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		304C03EF2AD94B9200B49267 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		308C1ED22AF0FA6E007C1319 /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				304C03E32AD94B8F00B49267 /* SceneDelegate.swift */,
 				304C03E52AD94B8F00B49267 /* ViewController.swift */,
 				304C03E72AD94B8F00B49267 /* Main.storyboard */,
+				308C1ED22AF0FA6E007C1319 /* HomeScreen.storyboard */,
 				304C03EA2AD94B9200B49267 /* Assets.xcassets */,
 				304C03EC2AD94B9200B49267 /* LaunchScreen.storyboard */,
 				304C03EF2AD94B9200B49267 /* Info.plist */,
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				304C03EE2AD94B9200B49267 /* LaunchScreen.storyboard in Resources */,
+				308C1ED32AF0FA6E007C1319 /* HomeScreen.storyboard in Resources */,
 				304C03EB2AD94B9200B49267 /* Assets.xcassets in Resources */,
 				304C03E92AD94B8F00B49267 /* Main.storyboard in Resources */,
 			);

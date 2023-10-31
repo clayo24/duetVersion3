@@ -19,41 +19,61 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lockscreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="sd8-O8-YrM">
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="slogan" translatesAutoresizingMaskIntoConstraints="NO" id="hrf-4G-za7">
+                                <rect key="frame" x="127" y="789" width="176" height="65"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lockscreen_logo" translatesAutoresizingMaskIntoConstraints="NO" id="LRN-fg-1dE">
-                                <rect key="frame" x="57.666666666666657" y="59" width="315" height="193"/>
+                                <rect key="frame" x="108" y="235" width="214" height="126"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="username" translatesAutoresizingMaskIntoConstraints="NO" id="cau-NC-BHc">
-                                <rect key="frame" x="76" y="507" width="278" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="wdc-hO-yay">
-                                <rect key="frame" x="76" y="596" width="278" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="baD-64-EyB">
-                                <rect key="frame" x="93" y="545" width="249" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Iz-am-xlY">
-                                <rect key="frame" x="93" y="632" width="249" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bm9-gh-eI0">
+                                <rect key="frame" x="54" y="395" width="322" height="299"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="username" translatesAutoresizingMaskIntoConstraints="NO" id="cau-NC-BHc">
+                                        <rect key="frame" x="22" y="20" width="278" height="101"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="wdc-hO-yay">
+                                        <rect key="frame" x="22" y="102" width="278" height="101"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="baD-64-EyB">
+                                        <rect key="frame" x="37" y="62" width="249" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Iz-am-xlY">
+                                        <rect key="frame" x="37" y="140" width="249" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loginbutton" translatesAutoresizingMaskIntoConstraints="NO" id="HnL-Vp-6Ko">
+                                        <rect key="frame" x="20" y="135" width="282" height="144"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sd8-O8-YrM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0RJ-fg-8bx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LRN-fg-1dE" secondAttribute="bottom" constant="646" id="4KW-BP-DOH"/>
+                            <constraint firstItem="LRN-fg-1dE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="24b-to-WVS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LRN-fg-1dE" secondAttribute="trailing" constant="108" id="3Rj-MH-Max"/>
+                            <constraint firstItem="Bm9-gh-eI0" firstAttribute="top" secondItem="LRN-fg-1dE" secondAttribute="bottom" constant="34" id="4nz-wo-cdZ"/>
                             <constraint firstAttribute="trailing" secondItem="sd8-O8-YrM" secondAttribute="trailing" id="5ol-9X-tLn"/>
                             <constraint firstItem="sd8-O8-YrM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="675-Wz-TmU"/>
                             <constraint firstAttribute="bottom" secondItem="sd8-O8-YrM" secondAttribute="bottom" id="Btl-EM-8an"/>
-                            <constraint firstItem="LRN-fg-1dE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57.5" id="RMr-Nf-uIT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LRN-fg-1dE" secondAttribute="trailing" constant="57.5" id="pEq-25-g7b"/>
-                            <constraint firstItem="LRN-fg-1dE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wRW-Ok-ZZZ"/>
+                            <constraint firstItem="Bm9-gh-eI0" firstAttribute="top" secondItem="LRN-fg-1dE" secondAttribute="bottom" constant="34" id="FB1-oU-U6q"/>
+                            <constraint firstItem="LRN-fg-1dE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="FsX-yS-I8E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LRN-fg-1dE" secondAttribute="trailing" constant="108" id="RLI-Qo-9yE"/>
+                            <constraint firstItem="Bm9-gh-eI0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="RSI-bf-9f0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bm9-gh-eI0" secondAttribute="trailing" constant="54" id="Srp-pr-jka"/>
+                            <constraint firstItem="LRN-fg-1dE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="176" id="UDz-uh-JSb"/>
+                            <constraint firstItem="Bm9-gh-eI0" firstAttribute="top" secondItem="LRN-fg-1dE" secondAttribute="bottom" constant="34" id="fWO-Y6-Vb9"/>
+                            <constraint firstItem="LRN-fg-1dE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="176" id="fX0-dG-Brb"/>
+                            <constraint firstItem="hrf-4G-za7" firstAttribute="top" secondItem="Bm9-gh-eI0" secondAttribute="bottom" constant="95" id="qcL-K1-LqK"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -65,7 +85,9 @@
     <resources>
         <image name="lockscreenBackground" width="144" height="256"/>
         <image name="lockscreen_logo" width="565.66668701171875" height="370.33334350585938"/>
+        <image name="loginbutton" width="1386.3333740234375" height="123"/>
         <image name="password" width="1069" height="217.66667175292969"/>
+        <image name="slogan" width="484.66665649414062" height="57.333332061767578"/>
         <image name="username" width="1069" height="212"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
