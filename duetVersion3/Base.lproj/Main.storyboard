@@ -22,10 +22,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="slogan" translatesAutoresizingMaskIntoConstraints="NO" id="hrf-4G-za7">
                                 <rect key="frame" x="127" y="789" width="176" height="65"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lockscreen_logo" translatesAutoresizingMaskIntoConstraints="NO" id="LRN-fg-1dE">
-                                <rect key="frame" x="108" y="235" width="214" height="126"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bm9-gh-eI0">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bm9-gh-eI0">
                                 <rect key="frame" x="54" y="395" width="322" height="299"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="username" translatesAutoresizingMaskIntoConstraints="NO" id="cau-NC-BHc">
@@ -54,25 +51,22 @@
                                     </imageView>
                                 </subviews>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lockscreen_logo" translatesAutoresizingMaskIntoConstraints="NO" id="LRN-fg-1dE">
+                                <rect key="frame" x="94" y="174" width="242" height="213"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sd8-O8-YrM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0RJ-fg-8bx"/>
-                            <constraint firstItem="LRN-fg-1dE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="24b-to-WVS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LRN-fg-1dE" secondAttribute="trailing" constant="108" id="3Rj-MH-Max"/>
-                            <constraint firstItem="Bm9-gh-eI0" firstAttribute="top" secondItem="LRN-fg-1dE" secondAttribute="bottom" constant="34" id="4nz-wo-cdZ"/>
                             <constraint firstAttribute="trailing" secondItem="sd8-O8-YrM" secondAttribute="trailing" id="5ol-9X-tLn"/>
                             <constraint firstItem="sd8-O8-YrM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="675-Wz-TmU"/>
                             <constraint firstAttribute="bottom" secondItem="sd8-O8-YrM" secondAttribute="bottom" id="Btl-EM-8an"/>
-                            <constraint firstItem="Bm9-gh-eI0" firstAttribute="top" secondItem="LRN-fg-1dE" secondAttribute="bottom" constant="34" id="FB1-oU-U6q"/>
-                            <constraint firstItem="LRN-fg-1dE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="FsX-yS-I8E"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LRN-fg-1dE" secondAttribute="trailing" constant="108" id="RLI-Qo-9yE"/>
+                            <constraint firstItem="LRN-fg-1dE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="115" id="MRM-gR-gby"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LRN-fg-1dE" secondAttribute="trailing" constant="94" id="P1t-wT-2ST"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="LRN-fg-1dE" secondAttribute="bottom" constant="511" id="PNb-ID-1bk"/>
                             <constraint firstItem="Bm9-gh-eI0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="RSI-bf-9f0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bm9-gh-eI0" secondAttribute="trailing" constant="54" id="Srp-pr-jka"/>
-                            <constraint firstItem="LRN-fg-1dE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="176" id="UDz-uh-JSb"/>
-                            <constraint firstItem="Bm9-gh-eI0" firstAttribute="top" secondItem="LRN-fg-1dE" secondAttribute="bottom" constant="34" id="fWO-Y6-Vb9"/>
-                            <constraint firstItem="LRN-fg-1dE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="176" id="fX0-dG-Brb"/>
+                            <constraint firstItem="LRN-fg-1dE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94" id="VKY-Jb-aZm"/>
                             <constraint firstItem="hrf-4G-za7" firstAttribute="top" secondItem="Bm9-gh-eI0" secondAttribute="bottom" constant="95" id="qcL-K1-LqK"/>
                         </constraints>
                     </view>
