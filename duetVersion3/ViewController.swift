@@ -9,9 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
+    
     let toolBarArray = [ UIImage(named: "matchpage"), UIImage(named: "profilepage"), UIImage(named: "explorepage"), UIImage(named: "messagespage")]
     
+    
 
+    let userList = [User(name: "mike", thingsToBring: "Water bottle, money, phone", topArtists: "Dua Lipa, ACDC, Britney Spears", topGenres: "Rock, Pop, Hip Hop", aboutUser: "Looking for a paralegal to jam out in court with", guiltyPleasure: "Goofy Goober", userPicture: UIImage(named: "mike") ?? <#default value#>), ]
+    
+    
+    
     @IBOutlet weak var toolBar: UIImageView!
     
     let profilePhotosArray = [ UIImage(named: "mike"), UIImage(named: "harvey"), UIImage(named: "robert")]
@@ -19,9 +26,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var profilePhotos: UIImageView!
     
     
-    func changeProfilePicture(){
-        profilePhotos.image = profilePhotosArray[Int.random(in: 0...2)]
-    }
+    
     
     
     @IBAction func swipeLeft(_ sender: UIButton) {
@@ -112,6 +117,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        var displayUser = userList[0]
+        
+        
+        func changeProfileUser(){
+            var placeHolder = Int.random(in: 0...userList.count)
+            while userList[placeHolder].isEqual(displayUser) {
+                placeHolder = Int.random(in: 0...userList.count)
+            }
+            displayUser = userList[placeHolder]
+            
+            //profilePhotos.image = profilePhotosArray[Int.random(in: 0...2)]
+        }
+        
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
             swipeRight.direction = .right
             self.view.addGestureRecognizer(swipeRight)
@@ -132,7 +150,7 @@ class ViewController: UIViewController {
             case .right:
                 print("Swiped right")
                 if(toolBar.image == toolBarArray[0]){
-                    changeProfilePicture()
+                    changeProfileUser()
                     
                     
                     //profilePhotos.image = profilePhotosArray[Int.random(in: 0...2)]
@@ -145,9 +163,9 @@ class ViewController: UIViewController {
                 print("Swiped left")
                 if(toolBar.image == toolBarArray[0]){
                     //change profile
-                    changeProfilePicture()
+                    changeProfileUser()
                     
-                    descrictionOfThingsToBringConcert.text = "test"
+                    descrictionOfThingsToBringConcert.text = displayUser.thingsToBring
                     
                     descriptionOfTopArtists.text = "Dua Lipa"
                     
