@@ -9,49 +9,66 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var displayUser: User
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
+            swipeRight.direction = .right
+            self.view.addGestureRecognizer(swipeRight)
+
+            let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
+            swipeLeft.direction = .left
+            self.view.addGestureRecognizer(swipeLeft)
+        
+        
+        
+    }
+   
+    init(displayUser: User) {
+        self.displayUser = displayUser
+        super.init(nibName: nil, bundle: nil)
+    }
+    required init?(coder aDecoder: NSCoder) {
+        // Assuming you want to initialize displayUser with a default user here
+        self.displayUser = User(name: "", thingsToBring: "", topArtists: "", topGenres: "", aboutUser: "", guiltyPleasure: "", userPicture: UIImage())
+        super.init(coder: aDecoder)
+    }
+    
+
     
     
     let toolBarArray = [ UIImage(named: "matchpage"), UIImage(named: "profilepage"), UIImage(named: "explorepage"), UIImage(named: "messagespage")]
     
     
 
-    let userList = [User(name: "mike", thingsToBring: "Water bottle, money, phone", topArtists: "Dua Lipa, ACDC, Britney Spears", topGenres: "Rock, Pop, Hip Hop", aboutUser: "Looking for a paralegal to jam out in court with", guiltyPleasure: "Goofy Goober", userPicture: UIImage(named: "mike") ?? <#default value#>), ]
+    let userList = [User(name: "mike", 
+                         thingsToBring: "Water bottle, money, phone",
+                         topArtists: "Dua Lipa, ACDC, Britney Spears",
+                         topGenres: "Rock, Pop, Hip Hop",
+                         aboutUser: "Looking for a paralegal to jam out in court with",
+                         guiltyPleasure: "Goofy Goober",
+                         userPicture: UIImage(named: "mike")!),
+                    User(name: "harvey",
+                         thingsToBring: "money, a three peice suit",
+                         topArtists: "Kendrick, Papa Johns",
+                         topGenres: "Christian Rock, elevator music",
+                         aboutUser: "Wanting a boardmember to party with",
+                         guiltyPleasure: "Wonderwall",
+                         userPicture: UIImage(named: "harvey")!)
+    ]
     
-    
+  
     
     @IBOutlet weak var toolBar: UIImageView!
     
-    let profilePhotosArray = [ UIImage(named: "mike"), UIImage(named: "harvey"), UIImage(named: "robert")]
     
     @IBOutlet weak var profilePhotos: UIImageView!
     
     
     
-    
-    
-    @IBAction func swipeLeft(_ sender: UIButton) {
-        if(toolBar.image == toolBarArray[0]){
-            
-            profilePhotos.image = profilePhotosArray[Int.random(in: 0...2)]
-            
-            descrictionOfThingsToBringConcert.text = "test"
-            
-         
-            
-            
-        }
-        
-    }
-    
-    
-    @IBAction func swipeRight(_ sender: UIButton) {
-        if(toolBar.image == toolBarArray[0]){
-            
-            profilePhotos.image = profilePhotosArray[Int.random(in: 0...2)]
-        }
-         
-        
-    }
     
     
     @IBAction func ButtonLogin(_ sender: UIButton) {
@@ -112,35 +129,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var aboutDescription: UILabel!
     
     
+    @IBOutlet weak var profileHeader: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    
+    func changeProfileUser(){
         
-        var displayUser = userList[0]
-        
-        
-        func changeProfileUser(){
-            var placeHolder = Int.random(in: 0...userList.count)
-            while userList[placeHolder].isEqual(displayUser) {
-                placeHolder = Int.random(in: 0...userList.count)
-            }
-            displayUser = userList[placeHolder]
-            
-            //profilePhotos.image = profilePhotosArray[Int.random(in: 0...2)]
+        var placeHolder = Int.random(in: 0...userList.count-1)
+        while userList[placeHolder].isEqual(displayUser) {
+            placeHolder = Int.random(in: 0...userList.count-1)
         }
+        displayUser = userList[placeHolder]
         
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
-            swipeRight.direction = .right
-            self.view.addGestureRecognizer(swipeRight)
-
-            let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
-            swipeLeft.direction = .left
-            self.view.addGestureRecognizer(swipeLeft)
-        
-        
-        
+        //profilePhotos.image = profilePhotosArray[Int.random(in: 0...2)]
     }
+    
+    
+    
+    
     
     @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
 
@@ -151,6 +157,19 @@ class ViewController: UIViewController {
                 print("Swiped right")
                 if(toolBar.image == toolBarArray[0]){
                     changeProfileUser()
+                    
+                    descrictionOfThingsToBringConcert.text = displayUser.thingsToBring
+                    
+                    descriptionOfTopArtists.text = displayUser.topArtists
+                    
+                    guiltyPleasureDiscription.text = displayUser.guiltyPleasure
+                    
+                    topGenresDescription.text = displayUser.topGenres
+                    
+                    aboutDescription.text = displayUser.aboutUser
+                
+                    
+                    profilePhotos.image = displayUser.userPicture
                     
                     
                     //profilePhotos.image = profilePhotosArray[Int.random(in: 0...2)]
@@ -167,22 +186,16 @@ class ViewController: UIViewController {
                     
                     descrictionOfThingsToBringConcert.text = displayUser.thingsToBring
                     
-                    descriptionOfTopArtists.text = "Dua Lipa"
+                    descriptionOfTopArtists.text = displayUser.topArtists
                     
-                    guiltyPleasureDiscription.text = "Fearless, Taylor Swift"
+                    guiltyPleasureDiscription.text = displayUser.guiltyPleasure
                     
-                    topGenresDescription.text = "Death Metal"
+                    topGenresDescription.text = displayUser.topGenres
                     
-                    aboutDescription.text = "Looking for a paralegal to jam out in court with"
-                    
-                    
+                    aboutDescription.text = displayUser.aboutUser
                     
                     
-                    
-                    
-                    
-                    
-                    //profilePhotos.image = profilePhotosArray[Int.random(in: 0...2)]
+                    profilePhotos.image = displayUser.userPicture
                 }
                 
             case .up:
