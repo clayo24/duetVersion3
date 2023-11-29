@@ -57,7 +57,14 @@ class ViewController: UIViewController {
                          topGenres: "Christian Rock, elevator music",
                          aboutUser: "Wanting a boardmember to party with",
                          guiltyPleasure: "Wonderwall",
-                         userPicture: UIImage(named: "harvey")!)
+                         userPicture: UIImage(named: "harvey")!),
+                    User(name: "robert",
+                         thingsToBring: "I don't watch suits",
+                         topArtists: "Kesha, Gorillaz",
+                         topGenres: "Dwarven Rock, Russian Folk Music",
+                         aboutUser: "Interested in creating a victory song to celebrate to with your honor",
+                         guiltyPleasure: "Lofi Music",
+                         userPicture: UIImage(named: "robert")!)
     ]
     
   
@@ -84,9 +91,6 @@ class ViewController: UIViewController {
     
     
     @IBAction func matchPage(_ sender: UIButton) {
-        
-        
-        
         if toolBar.image == toolBarArray[0]{
         }
         else{
@@ -107,30 +111,21 @@ class ViewController: UIViewController {
         }
         
     }
-    
-    @IBAction func swipe(_ sender: UIButton) {
-        
-    }
-    
+  
     
     @IBOutlet weak var descrictionOfThingsToBringConcert: UILabel!
     
-    
     @IBOutlet weak var descriptionOfTopArtists: UILabel!
-    
     
     @IBOutlet weak var guiltyPleasureDiscription: UILabel!
     
-    
     @IBOutlet weak var topGenresDescription: UILabel!
-    
-    
     
     @IBOutlet weak var aboutDescription: UILabel!
     
-    
     @IBOutlet weak var profileHeader: UILabel!
     
+    @IBOutlet weak var aboutHeader: UILabel!
     
     
     func changeProfileUser(){
@@ -167,17 +162,19 @@ class ViewController: UIViewController {
                     topGenresDescription.text = displayUser.topGenres
                     
                     aboutDescription.text = displayUser.aboutUser
+                    
+                    profileHeader.text = displayUser.name + " profile"
                 
+                    aboutHeader.text = "about " + displayUser.name
                     
                     profilePhotos.image = displayUser.userPicture
+                    
+                    
                     
                     
                     //profilePhotos.image = profilePhotosArray[Int.random(in: 0...2)]
                     
                 }
-                
-            case .down:
-                print("Swiped down")
             case .left:
                 print("Swiped left")
                 if(toolBar.image == toolBarArray[0]){
@@ -194,12 +191,12 @@ class ViewController: UIViewController {
                     
                     aboutDescription.text = displayUser.aboutUser
                     
+                    profileHeader.text = displayUser.name + " profile"
+                    
+                    aboutHeader.text = "about " + displayUser.name
                     
                     profilePhotos.image = displayUser.userPicture
                 }
-                
-            case .up:
-                print("Swiped up")
             default:
                 break
             }

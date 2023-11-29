@@ -319,6 +319,7 @@
                     <navigationItem key="navigationItem" id="BYz-yo-2Qd"/>
                     <connections>
                         <outlet property="aboutDescription" destination="ImE-tb-xLy" id="Eym-DM-CvV"/>
+                        <outlet property="aboutHeader" destination="g2S-Cj-5UM" id="URP-OM-qGQ"/>
                         <outlet property="descrictionOfThingsToBringConcert" destination="Tnu-lf-BnO" id="lyU-bU-pex"/>
                         <outlet property="descriptionOfTopArtists" destination="lp9-MB-mwL" id="YTR-hf-yC6"/>
                         <outlet property="guiltyPleasureDiscription" destination="a9U-kE-Onf" id="DWy-Ii-8vZ"/>
