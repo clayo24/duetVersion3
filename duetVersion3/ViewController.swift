@@ -64,7 +64,18 @@ class ViewController: UIViewController {
                          topGenres: "Dwarven Rock, Russian Folk Music",
                          aboutUser: "Interested in creating a victory song to celebrate to with your honor",
                          guiltyPleasure: "Lofi Music",
-                         userPicture: UIImage(named: "robert")!)
+                         userPicture: UIImage(named: "robert")!),
+                    User(name: "Emma", thingsToBring: "my two best friends and you!", topArtists: "Taylor Swift, Ed Sheeran, Drake", topGenres: "Pop, R&B, Hip-Hop", aboutUser: "I'm secretly a Kanye fan!", guiltyPleasure: "Call Me Maybe -Carly Rae Jepsen", userPicture: UIImage(named: "emma")!),
+                    User(name: "Liam", thingsToBring: "water, cool sunglasses and a poncho", topArtists: "Imagine Dragons, Billie Eilish, Khalid", topGenres: "Alternative, Pop, Indie Pop", aboutUser: "Jeff Buckley is my patron saint", guiltyPleasure: "Barbie Girl -Acqua", userPicture: UIImage(named: "liam")!),
+                    User(name: "Olivia", thingsToBring: "comfy shoes for standing and my friends", topArtists: "BTS, Ariana Grande, Post Malone", topGenres: "K-Pop, Pop, Hip-Hop", aboutUser: "My idea first date is a concert", guiltyPleasure: "Wannabe -Spice Girls", userPicture: UIImage(named: "olivia")!),
+                    User(name: "Noah", thingsToBring: "a lighter to hold in the air like the old days", topArtists: "The Weeknd, Dua Lipa, Justin Bieber", topGenres: "R&B, Pop, Dance", aboutUser: "I will analyse your spotify wrapped", guiltyPleasure: "Never Gonna Give You Up -Rick Astley", userPicture: UIImage(named: "noah")!),
+                    User(name: "Ava", thingsToBring: "hairband and sparkly eyeshadow", topArtists: "Coldplay, Adele, Maroon 5", topGenres: "Pop, Rock, Adult Contemporary", aboutUser: "I also dabble in DnB, love a good bassline", guiltyPleasure: "MMMBop - Hanson", userPicture: UIImage(named: "ava")!),
+                    User(name: "Isabella", thingsToBring: "diet coke a fan and my dog", topArtists: "Drake, Rhianna, Taylor Swift", topGenres: "Hip-Hop, R&B, Pop", aboutUser: "Sould sell my sould for Drake tickets", guiltyPleasure: "Baby Shark -Pinkfog", userPicture: UIImage(named: "isabella")!),
+                    User(name: "Sophia", thingsToBring: "something to be signed and water", topArtists: "Shawn Mendes, Beyonce, Taylor Swift", topGenres: "Pop, R&B, Soul", aboutUser: "Looking for someone to come with me to the Eras Tour", guiltyPleasure: "Ice Ice Baby -Vanilla Ice", userPicture: UIImage(named: "sophia")!),
+                    User(name: "Jackson", thingsToBring: "Water, sunglasses and a friend", topArtists: "Kendrick Lamar, Jay-Z, Eminem", topGenres: "Hip-Hop, Rap, R&B", aboutUser: "I'm the best of the 5", guiltyPleasure: "Macerena -Los Del Rio", userPicture: UIImage(named: "jackson")!),
+                    User(name: "Aiden", thingsToBring: "glowstick neckalce and glasses", topArtists: "Bruno Mars, Justin Timerlake, SZA", topGenres: "Pop, R&B, Funk", aboutUser: "Looking for someone to share headphones with", guiltyPleasure: "Mambo No.5 -Lou Bega", userPicture: UIImage(named: "aiden")!),
+                    User(name: "Robby", thingsToBring: "I would sneak candy in from outside", topArtists: "The Snuts, Arctic Monkeys, Green Day", topGenres: "Alternative, Rock, Indie-Rock", aboutUser: "I love Scottish Indie Rock!", guiltyPleasure: "Let It Go -Idina Menzel", userPicture: UIImage(named: "robby")!)
+                    
     ]
     
   
