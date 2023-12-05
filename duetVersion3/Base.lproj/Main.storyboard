@@ -80,6 +80,20 @@
                                     <action selector="ButtonLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7v1-JA-e4O"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="createaccountbutton" translatesAutoresizingMaskIntoConstraints="NO" id="QZn-E0-DDq">
+                                <rect key="frame" x="76" y="493" width="278" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKE-J3-nyI">
+                                <rect key="frame" x="76" y="490" width="278" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -531,6 +545,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="createaccountbutton" width="1069.3333740234375" height="155"/>
         <image name="editbutton" width="86.333335876464844" height="86.333335876464844"/>
         <image name="lockscreenBackground" width="144" height="256"/>
         <image name="lockscreen_logo" width="565.66668701171875" height="370.33334350585938"/>

@@ -39,40 +39,88 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(longAnswerEditButtonTapped))
         longAnswerEditButton?.isUserInteractionEnabled = true
         longAnswerEditButton?.addGestureRecognizer(tapGestureRecognizer)
-        
         longAnswerEditButton?.image = UIImage(named: "editbutton")
+        
+        let shortTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(shortAnswerEditButtonTapped))
+            shortAnswerEditButton?.isUserInteractionEnabled = true
+            shortAnswerEditButton?.addGestureRecognizer(shortTapGestureRecognizer)
         
 
     }
     
    
     
-    @objc func longAnswerEditButtonTapped() {
-            // You can present an alert or any other UI to allow the user to edit the label text
-            showTextEditAlert()
-        }
+//    @objc func longAnswerEditButtonTapped() {
+//            // You can present an alert or any other UI to allow the user to edit the label text
+//            showTextEditAlert()
+//        }
+//    
+//    func showTextEditAlert() {
+//            let alertController = UIAlertController(title: "Edit Text", message: nil, preferredStyle: .alert)
+//
+//            alertController.addTextField { textField in
+//                textField.placeholder = "Enter new text"
+//            }
+//
+//            let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
+//                // Update the text label with the entered text
+//                if let newText = alertController.textFields?.first?.text {
+//                    self.longAnswerEdit.text = newText
+//                }
+//            }
+//
+//            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//
+//            alertController.addAction(saveAction)
+//            alertController.addAction(cancelAction)
+//
+//            present(alertController, animated: true, completion: nil)
+//        }
     
-    func showTextEditAlert() {
-            let alertController = UIAlertController(title: "Edit Text", message: nil, preferredStyle: .alert)
-
-            alertController.addTextField { textField in
-                textField.placeholder = "Enter new text"
-            }
-
-            let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
-                // Update the text label with the entered text
-                if let newText = alertController.textFields?.first?.text {
-                    self.longAnswerEdit.text = newText
-                }
-            }
-
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-
-            alertController.addAction(saveAction)
-            alertController.addAction(cancelAction)
-
-            present(alertController, animated: true, completion: nil)
+    @objc func longAnswerEditButtonTapped(sender: UITapGestureRecognizer) {
+        guard let button = sender.view as? UIImageView else {
+            return
         }
+
+        // Determine which button was tapped
+        switch button {
+        case longAnswerEditButton:
+            showTextEditAlert(for: longAnswerEdit)
+        case shortAnswerEditButton:
+            showTextEditAlert(for: shortAnswerEdit)
+        // Add more cases for other buttons if needed
+        default:
+            break
+        }
+    }
+    
+    @objc func shortAnswerEditButtonTapped() {
+        showTextEditAlert(for: shortAnswerEdit)
+    }
+
+
+    func showTextEditAlert(for label: UILabel) {
+        let alertController = UIAlertController(title: "Edit Text", message: nil, preferredStyle: .alert)
+
+        alertController.addTextField { textField in
+            textField.placeholder = "Enter new text"
+        }
+
+        let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
+            // Update the specified label with the entered text
+            if let newText = alertController.textFields?.first?.text {
+                label.text = newText
+            }
+        }
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+
+        present(alertController, animated: true, completion: nil)
+    }
+
     
    
     init(displayUser: User) {
