@@ -7,7 +7,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var longAnswerEdit: UILabel!
+    @IBOutlet weak var longAnswerEditButton: UIImageView!
+    
+    
+ 
+    
+    @IBOutlet weak var shortAnswerEdit: UILabel!
+    @IBOutlet weak var shortAnswerEditButton: UIImageView!
+    
+    @IBOutlet weak var generalAnswerArtistEditButton: UIImageView!
+    
     
     var displayUser: User
     
@@ -24,11 +36,49 @@ class ViewController: UIViewController {
             self.view.addGestureRecognizer(swipeLeft)
         
         
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(longAnswerEditButtonTapped))
+        longAnswerEditButton?.isUserInteractionEnabled = true
+        longAnswerEditButton?.addGestureRecognizer(tapGestureRecognizer)
         
+        longAnswerEditButton?.image = UIImage(named: "editbutton")
+        
+
     }
+    
+   
+    
+    @objc func longAnswerEditButtonTapped() {
+            // You can present an alert or any other UI to allow the user to edit the label text
+            showTextEditAlert()
+        }
+    
+    func showTextEditAlert() {
+            let alertController = UIAlertController(title: "Edit Text", message: nil, preferredStyle: .alert)
+
+            alertController.addTextField { textField in
+                textField.placeholder = "Enter new text"
+            }
+
+            let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
+                // Update the text label with the entered text
+                if let newText = alertController.textFields?.first?.text {
+                    self.longAnswerEdit.text = newText
+                }
+            }
+
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+            alertController.addAction(saveAction)
+            alertController.addAction(cancelAction)
+
+            present(alertController, animated: true, completion: nil)
+        }
+    
    
     init(displayUser: User) {
         self.displayUser = displayUser
+//        longAnswerEditButton.image = UIImage(named: "editbutton")
+//        longAnswerEditButton.isUserInteractionEnabled = false
         super.init(nibName: nil, bundle: nil)
     }
     required init?(coder aDecoder: NSCoder) {
@@ -99,6 +149,12 @@ class ViewController: UIViewController {
         self.performSegue(withIdentifier: "GoBack", sender: self)
         
     }
+    
+    @IBAction func goToProfilePage(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "goToProfilePagePlease", sender: self)
+        
+    }
+    
     
     
     @IBAction func matchPage(_ sender: UIButton) {
