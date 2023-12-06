@@ -4,8 +4,17 @@
 //
 //  Created by Clay Olson on 10/13/23.
 //
+//Most recent update on 12/5/2023 21:20
 
 import UIKit
+
+class DataManager {
+    static let shared = DataManager()
+
+    var longAnswerText: String?
+    var shortAnswerText: String?
+    //Can add more when nessesary
+}
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
@@ -26,6 +35,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // Load saved text from DataManager
+        longAnswerEdit?.text = DataManager.shared.longAnswerText
+        shortAnswerEdit?.text = DataManager.shared.shortAnswerText
         
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
             swipeRight.direction = .right
@@ -50,66 +63,52 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
    
     
-//    @objc func longAnswerEditButtonTapped() {
-//            // You can present an alert or any other UI to allow the user to edit the label text
-//            showTextEditAlert()
-//        }
-//    
-//    func showTextEditAlert() {
-//            let alertController = UIAlertController(title: "Edit Text", message: nil, preferredStyle: .alert)
-//
-//            alertController.addTextField { textField in
-//                textField.placeholder = "Enter new text"
-//            }
-//
-//            let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
-//                // Update the text label with the entered text
-//                if let newText = alertController.textFields?.first?.text {
-//                    self.longAnswerEdit.text = newText
-//                }
-//            }
-//
-//            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-//
-//            alertController.addAction(saveAction)
-//            alertController.addAction(cancelAction)
-//
-//            present(alertController, animated: true, completion: nil)
-//        }
-    
     @objc func longAnswerEditButtonTapped(sender: UITapGestureRecognizer) {
-        guard let button = sender.view as? UIImageView else {
-            return
-        }
+            guard let button = sender.view as? UIImageView else {
+                return
+            }
 
-        // Determine which button was tapped
-        switch button {
-        case longAnswerEditButton:
-            showTextEditAlert(for: longAnswerEdit)
-        case shortAnswerEditButton:
-            showTextEditAlert(for: shortAnswerEdit)
-        // Add more cases for other buttons if needed
-        default:
-            break
+            // Determine which button was tapped
+            switch button {
+            case longAnswerEditButton:
+                showTextEditAlert(for: longAnswerEdit, key: "longAnswerText")
+            case shortAnswerEditButton:
+                showTextEditAlert(for: shortAnswerEdit, key: "shortAnswerText")
+            // Add more cases for other buttons if needed
+            default:
+                break
+            }
         }
-    }
     
     @objc func shortAnswerEditButtonTapped() {
-        showTextEditAlert(for: shortAnswerEdit)
+        showTextEditAlert(for: shortAnswerEdit, key: "shortAnswerText")
     }
 
 
-    func showTextEditAlert(for label: UILabel) {
+
+    
+    func showTextEditAlert(for label: UILabel, key: String? = nil) {
         let alertController = UIAlertController(title: "Edit Text", message: nil, preferredStyle: .alert)
 
         alertController.addTextField { textField in
             textField.placeholder = "Enter new text"
+            textField.text = label.text
         }
 
         let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
             // Update the specified label with the entered text
             if let newText = alertController.textFields?.first?.text {
                 label.text = newText
+
+                // Save the text to DataManager if a key is provided
+                if let key = key {
+                    if key == "longAnswerText" {
+                        DataManager.shared.longAnswerText = newText
+                    } else if key == "shortAnswerText" {
+                        DataManager.shared.shortAnswerText = newText
+                    }
+                    // Add more cases for other keys if needed
+                }
             }
         }
 
@@ -121,12 +120,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         present(alertController, animated: true, completion: nil)
     }
 
+
     
    
     init(displayUser: User) {
         self.displayUser = displayUser
-//        longAnswerEditButton.image = UIImage(named: "editbutton")
-//        longAnswerEditButton.isUserInteractionEnabled = false
         super.init(nibName: nil, bundle: nil)
     }
     required init?(coder aDecoder: NSCoder) {
@@ -199,10 +197,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func goToProfilePage(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "goToProfilePagePlease", sender: self)
+        self.performSegue(withIdentifier: "fromMatchPageToProfilePage", sender: self)
         
     }
     
+    @IBAction func fromProfilePageToMatchPageAction(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "fromProfilePageToMatchPage", sender: self)
+    }
     
     
     @IBAction func matchPage(_ sender: UIButton) {
