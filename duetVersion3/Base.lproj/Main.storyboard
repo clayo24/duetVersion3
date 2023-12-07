@@ -97,7 +97,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
-                                    <segue destination="2sI-jZ-cUP" kind="presentation" id="OrJ-oc-JgV"/>
+                                    <segue destination="uIg-T5-tkk" kind="presentation" identifier="fromLoginPageToCreateAccountPage" animates="NO" modalPresentationStyle="fullScreen" id="UgT-HQ-oNL"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slogan" translatesAutoresizingMaskIntoConstraints="NO" id="hrf-4G-za7">
@@ -162,7 +162,7 @@
             <objects>
                 <viewController id="2sI-jZ-cUP" customClass="ViewController" customModule="duetVersion3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BVQ-XK-oAe">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile base" translatesAutoresizingMaskIntoConstraints="NO" id="WYI-4d-tN6">
@@ -183,14 +183,14 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilepage" translatesAutoresizingMaskIntoConstraints="NO" id="7My-d4-oHH">
-                                <rect key="frame" x="43" y="812" width="345" height="80"/>
+                                <rect key="frame" x="43" y="822" width="345" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="345" id="Wpj-F0-2vz"/>
                                     <constraint firstAttribute="height" constant="80" id="aSY-IJ-eXE"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVR-nX-Evd">
-                                <rect key="frame" x="64" y="835" width="55" height="35"/>
+                                <rect key="frame" x="64" y="845" width="55" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="55" id="274-91-Ifq"/>
                                     <constraint firstAttribute="height" constant="35" id="zZF-UE-urH"/>
@@ -439,7 +439,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8fi-Xm-K4H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="115.81395348837209" y="-661.15879828326183"/>
+            <point key="canvasLocation" x="313" y="-742"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5hp-gt-HXK">
@@ -654,7 +654,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="PrD-Yf-bDk"/>
-        <segue reference="OrJ-oc-JgV"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="createaccountbutton" width="1069.3333740234375" height="155"/>
