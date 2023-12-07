@@ -266,53 +266,52 @@ class ViewController: UIViewController, UITextFieldDelegate {
             switch swipeGesture.direction {
             case .right:
                 print("Swiped right")
-                if(toolBar.image == toolBarArray[0]){
-                    changeProfileUser()
+                changeProfileUser()
                     
-                    descrictionOfThingsToBringConcert.text = displayUser.thingsToBring
+                descrictionOfThingsToBringConcert.text = displayUser.thingsToBring
                     
-                    descriptionOfTopArtists.text = displayUser.topArtists
+                descriptionOfTopArtists.text = displayUser.topArtists
                     
-                    guiltyPleasureDiscription.text = displayUser.guiltyPleasure
+                guiltyPleasureDiscription.text = displayUser.guiltyPleasure
                     
-                    topGenresDescription.text = displayUser.topGenres
+                topGenresDescription.text = displayUser.topGenres
                     
-                    aboutDescription.text = displayUser.aboutUser
+                aboutDescription.text = displayUser.aboutUser
                     
-                    profileHeader.text = displayUser.name + " profile"
+                profileHeader.text = displayUser.name + " profile"
                 
-                    aboutHeader.text = "about " + displayUser.name
+                aboutHeader.text = "about " + displayUser.name
                     
-                    profilePhotos.image = displayUser.userPicture
+                profilePhotos.image = displayUser.userPicture
                     
                     
                     
                     
                     //profilePhotos.image = profilePhotosArray[Int.random(in: 0...2)]
                     
-                }
+                
             case .left:
                 print("Swiped left")
-                if(toolBar.image == toolBarArray[0]){
+                
                     //change profile
-                    changeProfileUser()
+                changeProfileUser()
                     
-                    descrictionOfThingsToBringConcert.text = displayUser.thingsToBring
+                descrictionOfThingsToBringConcert.text = displayUser.thingsToBring
                     
-                    descriptionOfTopArtists.text = displayUser.topArtists
+                descriptionOfTopArtists.text = displayUser.topArtists
                     
-                    guiltyPleasureDiscription.text = displayUser.guiltyPleasure
+                guiltyPleasureDiscription.text = displayUser.guiltyPleasure
                     
-                    topGenresDescription.text = displayUser.topGenres
+                topGenresDescription.text = displayUser.topGenres
                     
-                    aboutDescription.text = displayUser.aboutUser
+                aboutDescription.text = displayUser.aboutUser
                     
-                    profileHeader.text = displayUser.name + " profile"
+                profileHeader.text = displayUser.name + " profile"
                     
-                    aboutHeader.text = "about " + displayUser.name
+                aboutHeader.text = "about " + displayUser.name
                     
-                    profilePhotos.image = displayUser.userPicture
-                }
+                profilePhotos.image = displayUser.userPicture
+                
             default:
                 break
             }
