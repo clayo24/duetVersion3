@@ -201,8 +201,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    
     @IBAction func fromProfilePageToMatchPageAction(_ sender: UIButton) {
         self.performSegue(withIdentifier: "fromProfilePageToMatchPage", sender: self)
+    }
+    
+    @IBAction func goToMatchPageFromCreateAccountPage(_ sender: UIButton)  {
+        self.performSegue(withIdentifier: "fromCreateAccountToMatchPage", sender: self)
     }
     
     
